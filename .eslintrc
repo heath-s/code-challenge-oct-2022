@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:react/jsx-runtime"
+  ],
+  "overrides": [
+    {
+      "files": "**/*.stories.{js,jsx,ts,tsx}",
+      "rules": {
+        "import/no-anonymous-default-export": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "arrow-function"
+          }
+        ],
+        "react/jsx-props-no-spreading": [
+          "error",
+          {
+            "custom": "ignore"
+          }
+        ]
+      }
+    },
+    {
+      "files": "**/*.duck.ts",
+      "rules": {
+        "no-param-reassign": "off"
+      }
+    }
+  ],
+  "rules": {
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off"
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
